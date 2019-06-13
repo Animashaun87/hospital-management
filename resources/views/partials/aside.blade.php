@@ -26,6 +26,7 @@
         <!-- Menu -->
         <div class="menu">
             <ul class="list">
+                @auth
                 <li class="header">MAIN NAVIGATION</li>
                 <li class="active open"><a href="{{url('/')}}"><i class="zmdi zmdi-home"></i><span>Home</span></a></li>                                               
                 <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-calendar-check"></i><span>Appointment</span> </a>
@@ -37,14 +38,15 @@
                 <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account-add"></i><span>Doctors</span> </a>
                     <ul class="ml-menu">
                         <li><a href="{{url('all-doctor')}}">All Doctors</a></li>
-                        <li><a href="{{url('add-doctor')}}">Add Doctor</a></li>                       
+                        <li><a href="{{url('doctors/create')}}">Add Doctor</a></li>                       
                         <li><a href="{{url('profile')}}">Doctor Profile</a></li>
                     </ul>
                 </li>
                 <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account-o"></i><span>Patients</span> </a>
                     <ul class="ml-menu">
                         <li><a href="{{url('all-patient')}}">All Patients</a></li>
-                        <li><a href="{{url('add-patient')}}">Add Patient</a></li>                       
+                        <li><a href="{{url('patients/create')}}">Add Patient</a></li>   
+                        <li><a href="{{url('reg_patients')}}">Patient Registration</a></li>                       
                         <li><a href="{{url('patient-profile')}}">Patient Profile</a></li>
                         <li><a href="{{url('patient-invoice')}}">Patient Invoice</a></li>
                     </ul>
@@ -101,6 +103,7 @@
                 <li> <a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-red"></i><span>Important</span> </a> </li>
                 <li> <a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-amber"></i><span>Warning</span> </a> </li>
                 <li> <a href="javascript:void(0);"><i class="zmdi zmdi-chart-donut col-blue"></i><span>Information</span> </a> </li>
+                @endauth
             </ul>
         </div>
         <!-- #Menu -->

@@ -12,9 +12,9 @@ Doctor Profile
                 <section class="boxs-simple">
                     <div class="profile-header">
                         <div class="profile_info">
-                            <div class="profile-image"> <img src="#" alt=""> </div>
-                            <h4 class="mb-0"><strong></strong></h4>
-                            <span class="text-muted col-white"></span>
+                            <div class="profile-image"> <img src="{{url($doctor->picture)}}" alt=""> </div>
+                            <h4 class="mb-0"><strong>{{$doctor->title}}{{$doctor->name}}</strong></h4>
+                            <span class="text-muted col-white">{{$doctor->speciality}}</span>
                             <div class="mt-10">
                                 <button class="btn btn-raised btn-default bg-blush btn-sm">Follow</button>
                                 <button class="btn btn-raised btn-default bg-green btn-sm">Message</button>
@@ -41,9 +41,9 @@ Doctor Profile
                         <h2>About Me</h2>
                     </div>
                     <div class="body">
-                        <p class="text-default"></p>
+                        <p class="text-default">{{$doctor->description}}.</p>
                         <blockquote>
-                            <p></p>
+                            <p>{{$doctor->description}}</p>
                             <small>Designer <cite title="Source Title">Source Title</cite></small> </blockquote>
                     </div>
                 </div>

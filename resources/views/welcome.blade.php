@@ -1,10 +1,11 @@
 @extends('layouts.master')
 
 @section('title')
-Hospital Homepage
+Home
 @stop
 
 @section('content')
+@auth
 <section class="content home">
     <div class="container-fluid">
         <div class="block-header">
@@ -404,4 +405,5 @@ Hospital Homepage
         </div>
     </div>
 </section>
+@endauth
 @stop

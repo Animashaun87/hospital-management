@@ -3,8 +3,13 @@
         <div class="navbar-header"> <a href="javascript:void(0);" class="bars"></a> <a class="navbar-brand" href="{{url('/')}}">Swift Hospital</a> </div>
         <ul class="nav navbar-nav navbar-right">
             <!-- Notifications -->
-            <li><a href="{{url('login')}}">SIGN IN</a></li>
+            @auth
+            <span>{{auth()->user()->name}}</span>
+            <li><a href="{{url('logout')}}">SIGN OUT</a></li>
+            @else
+             <li><a href="{{url('login')}}">SIGN IN</a></li>
             <li><a href="{{url('register')}}">SIGN UP</a></li>
+            @endauth
             <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i> <span class="label-count">7</span> </a>
                 <ul class="dropdown-menu">
                     <li class="header">NOTIFICATIONS</li>

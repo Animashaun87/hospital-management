@@ -1,14 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Patient;
+use App\Doctor;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     function home()
     {
-    	return view('welcome');
+        $patients = Patient::all();
+    	return view('welcome', compact('patients'));
     }
     function appoint()
     {
@@ -20,15 +22,13 @@ class PageController extends Controller
     }
     function all_doctor()
     {
-    	return view('pages.all_doctor');
-    }
-     function add_doctor()
-    {
-    	return view('pages.add_doctor');
+        $doctors = Doctor::all();
+    	return view('pages.all_doctor', compact('doctors'));
     }
     function doc_profile()
     {
-    	return view('pages.doc_profile');
+        $doctors = Doctor::all();
+    	return view('pages.doc_profile', compact('doctors'));
     }
     function patient()
     {

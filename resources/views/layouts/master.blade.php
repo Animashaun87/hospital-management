@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<title> @yield('title'):: Swift - Hospital Admin ::</title>
+<title> @yield('title')::</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="{{url('assets/plugins/bootstrap/css/bootstrap.min.css')}}"/>
 <link rel="stylesheet" href="{{url('https://fonts.googleapis.com/icon?family=Material+Icons')}}" type="text/css">
